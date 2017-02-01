@@ -1,0 +1,15 @@
+require 'rubygems'
+require 'cucumber'
+require 'cucumber/rake/task'
+
+desc 'Execute fast scenarios'
+task :fast_scenarios do
+  puts 'Running fast scenarios'
+  sh 'cucumber -t @fast'
+end
+
+desc 'Execute critic scenarios'
+task :critic_scenarios do
+  puts 'Running critic scenarios'
+  sh 'cucumber -t @critic'
+end

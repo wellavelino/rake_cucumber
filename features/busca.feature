@@ -2,6 +2,7 @@
 @search
 Funcionalidade: Busca
 
+  @critic
   Esquema do Cenário: Posso realizar busca por repositórios especificos no github
     Dado que estou na home do github
     Quando procurar pelo repositório "<NOME>"
@@ -14,6 +15,7 @@ Funcionalidade: Busca
       | sunomono |
       | httparty |
 
+  @fast
   Cenário: Posso realizar busca e filtrar por issues abertas
     Dado que estou na home do github
     Quando realizar uma busca
