@@ -1,5 +1,5 @@
 # language: pt
-@register
+@pull_request
 Funcionalidade: PullRequest
 
   @critic
