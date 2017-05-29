@@ -1,5 +1,5 @@
 # language: pt
-  @register
+@register
 Funcionalidade: Cadastro
 
   @critic
@@ -16,5 +16,7 @@ Funcionalidade: Cadastro
     Quando realizar o cadastro primário com usuário existente
     Então devo visualizar a mensagem "login já está em uso"
 
-
+  @fast
+  Cenário: Posso me deslogar
+    Dado que ainda falta definição
 

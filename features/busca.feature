@@ -21,3 +21,11 @@ Funcionalidade: Busca
     Quando realizar uma busca
     E tocar em issues
     Então devo visualizar o resultado de issues abertas
+
+  Cenário: Posso realizar uma busca por um usuário especifíco
+    Dado que estou na home do github
+    Quando realizar uma busca por um "usuário válido"
+    E tocar em users
+    Então devo visualizar o usuário que foi filtrado
+
+
