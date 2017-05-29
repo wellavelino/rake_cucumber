@@ -26,4 +26,27 @@ task :medium_scenarios do
   sh 'cucumber -t @medium'
 end
 
+desc 'Execute register feature with fast scenarios'
+task :medium_scenarios do
+  puts 'Running medium scenarios'
+  sh 'cucumber -t ~@pull_request -t ~@search'
+end
+
+task :run_features, [:feature, :scenario] do |_task, args|
+  puts  "Running #{args[:feature]} feature with #{args[:scenario]} scenarios "
+  sh "cucumber -t @#{args[:feature]} -t @#{args[:scenario]}"
+end
+
+desc 'Execute fast scenarios'
+task :fast_scenarios do
+  puts 'Running fast scenarios'
+  sh 'bundle exec cucumber -t @fast'
+end
+
+task :run_features, [:feature, :scenario] do |_task, args|
+  puts  "Running #{args[:feature]} feature with #{args[:scenario]} scenarios and report"
+  sh "cucumber -t @#{args[:feature]} -t @#{args[:scenario]} -f html -o #{args[:scenario]}_scenarios.html"
+end
+
+
 
